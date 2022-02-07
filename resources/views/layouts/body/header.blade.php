@@ -7,7 +7,10 @@
 					<!-- Logo
 					============================================= -->
 					<div id="logo" class="mr-0 mx-lg-auto my-4">
-						<a href="{{url('/')}}" class="standard-logo">محمود طه</a>
+            @php
+              $settings = DB::table('settings')->first();
+            @endphp
+						<a href="{{url('/')}}" class="standard-logo"><img src="{{$settings->logo}}" alt=""></a>
 					</div><!-- #logo end -->
 
 				</div>

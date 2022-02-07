@@ -26,9 +26,15 @@
 
 	<link rel="stylesheet" href="{{asset('frontend/assets/css/colors.php?color=c0bb62')}}" type="text/css" />
 
+  @php
+              $settings = DB::table('settings')->first();
+            @endphp
+
+        <link rel="icon" href="{{$settings->favicon}}" type="image/gif" sizes="16x16">
+    
 	<!-- Document Title
 	============================================= -->
-	<title>محمود طه | الرئيسية</title>
+	<title> {{$settings->site_name}} | الرئيسية</title>
 <style>
   html {
   scroll-behavior: smooth;

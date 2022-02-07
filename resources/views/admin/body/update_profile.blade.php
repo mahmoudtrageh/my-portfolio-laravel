@@ -4,7 +4,7 @@
 
 <div class="card card-default">
 <div class="card-header card-header-border-bottom">
-     <h2>User Profile Update</h2>
+     <h2>تحديث الملف الشخصي</h2>
 </div>
 
 @if(session('success'))
@@ -21,17 +21,17 @@
           @csrf
 
           <div class="form-group">
-               <label for="exampleFormControlInput3">User Name</label>
+               <label for="exampleFormControlInput3">الإسم</label>
                <input type="text" name="name" class="form-control" value="{{ $user['name'] }}" > 
           </div>
 
           <div class="form-group">
-               <label for="exampleFormControlInput3">User Email</label>
+               <label for="exampleFormControlInput3">البريد الإلكتروني</label>
                <input type="text" name="email" class="form-control" value="{{ $user['email'] }}" > 
           </div>
  
 
-          <button type="submit" class="btn btn-primary btn-default"> Update</button>
+          <button type="submit" class="btn btn-primary btn-default"> تحديث</button>
            
      </form>
 </div>

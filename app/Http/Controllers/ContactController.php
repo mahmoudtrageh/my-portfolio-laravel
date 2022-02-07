@@ -12,7 +12,7 @@ class ContactController extends Controller
 {
     
  public function AdminContact(){
-     $contacts = Contact::all();
+     $contacts = Contact::latest()->paginate(5);
      return view('admin.contact.index',compact('contacts'));
  }
 

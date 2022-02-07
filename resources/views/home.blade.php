@@ -25,12 +25,13 @@
 
 					<div class="line mt-0"></div>
 
-					<h3 class="center">بعض <span>أخر</span> أعمالنا</h3>
+					@php
+					$portfolio = DB::table('portfolios')->latest()->get();
+					@endphp
+				<h3 class="center">بعض <span>أخر</span> أعمالنا <span class="badge badge-danger">{{count($portfolio)}}</span></h3>
 
 					<div id="oc-portfolio" class="owl-carousel portfolio-carousel carousel-widget" data-margin="1" data-loop="true" data-nav="true" data-pagi="false" data-items-xs="1" data-items-sm="2" data-items-md="3" data-items-lg="4" data-items-xl="4">
-						@php
-						$portfolio = DB::table('portfolios')->latest()->get();
-						@endphp
+					
 						@foreach($portfolio as $item)
 						<div class="portfolio-item">
 							<div class="portfolio-image">
@@ -39,13 +40,13 @@
 								</a>
 								<div class="bg-overlay">
 									<div class="bg-overlay-content dark" data-hover-animate="fadeIn" data-hover-speed="350">
-										<a href="{{$item->url}}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
+										<a target="_blank" href="{{$item->url}}" class="overlay-trigger-icon bg-light text-dark" data-hover-animate="fadeInDownSmall" data-hover-animate-out="fadeInUpSmall" data-hover-speed="350"><i class="icon-line-ellipsis"></i></a>
 									</div>
 									<div class="bg-overlay-bg dark" data-hover-animate="fadeIn" data-hover-speed="350"></div>
 								</div>
 							</div>
 							<div class="portfolio-desc">
-								<h3><a href="portfolio-single.html">{{$item->name}}</a></h3>
+								<h3><a target="_blank" href="{{$item->url}}">{{$item->name}}</a></h3>
 								<span>{{$item->tag}}</span>
 							</div>
 						</div>
@@ -68,7 +69,7 @@
 									<div class="testi-content">
 										<p>{{$testmonial->text}}</p>
 										<div class="testi-meta">
-											{{$testmonial->job}}
+											{{$testmonial->user}}
 											
 										</div>
 									</div>
