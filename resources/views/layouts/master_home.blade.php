@@ -39,6 +39,29 @@
   html {
   scroll-behavior: smooth;
 }
+.owl-prev{
+  position: absolute;
+    background-color: #c0bb62;
+    color: #fff;
+    padding: 5px 10px !important;
+    font-size: 30px;
+    top: 50%;
+    right: 0;
+}
+
+.owl-next{
+  position: absolute;
+    background-color: #c0bb62;
+    color: #fff;
+    padding: 5px 10px !important;
+    font-size: 30px;
+    top: 50%;
+    left: 0;
+}
+
+#oc-portfolio .owl-next, #oc-portfolio .owl-prev {
+  top:30% !important;
+}
 </style>
 </head>
 
@@ -81,29 +104,28 @@
 
     $('#oc-portfolio.owl-carousel').owlCarousel({
       rtl:true,
-      loop:true,
       margin:10,
-      nav:false,
+      nav:true,
       autoplay:true,
       responsive:{
         0:{
           items:1
         },
         600:{
-          items:3
+          items:2
         },
         1000:{
-          items:5
+          items:3
         }
       }
     });
 
   $('#oc-slider.owl-carousel').owlCarousel({
     rtl:true,
-    loop:true,
     margin:10,
-    nav:false,
+    nav:true,
     autoplay:true,
+    dots:false,
     responsive:{
       0:{
         items:1
@@ -121,7 +143,7 @@
     rtl:true,
     loop:true,
     margin:10,
-    nav:false,
+    nav:true,
     autoplay:true,
     responsive:{
       0:{
@@ -145,7 +167,7 @@
 
 var h = window.innerHeight;
 
-$('#oc-slider img').css('height', h/2);
+$('#oc-slider .owl-item').css('height', h-250);
 
   });
 </script>

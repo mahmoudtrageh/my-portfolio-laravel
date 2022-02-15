@@ -6256,6 +6256,10 @@ body:not(.has-plugin-html5video) .video-wrap video {
 	overflow: hidden;
 }
 
+.contact .content-wrap {
+	padding: 0 0 0 40px;
+}
+
 #content .container { position: relative; }
 
 .grid-container,

@@ -1,7 +1,6 @@
 <!-- Header
 		============================================= -->
 		<header id="header" data-sticky-shrink="false" class="header-size-md border-bottom-0">
-			<div class="container">
 				<div class="header-row flex-column flex-lg-row justify-content-center justify-content-lg-start">
 
 					<!-- Logo
@@ -14,10 +13,8 @@
 					</div><!-- #logo end -->
 
 				</div>
-			</div>
 
 			<div id="header-wrap">
-				<div class="container">
 					<div class="header-row justify-content-between">
 
 						<div id="primary-menu-trigger">
@@ -33,10 +30,10 @@
 									<a class="menu-link" href="#"><div>الرئيسية</div></a>
 								</li>
 								<li class="menu-item">
-									<a class="menu-link" href="#services"><div>خدماتي</div></a>
+									<a class="menu-link" href="#content"><div>خدماتي</div></a>
 								</li>
 								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#oc-portfolio"><div>أعمالي</div></a>
+									<a class="menu-link" href="#portfolio"><div>أعمالي</div></a>
 								</li>
 								{{-- <li class="menu-item">
 									<a class="menu-link" href="shop.html"><div>عملائي</div></a>
@@ -53,7 +50,7 @@
 									</ul>
 								</li> --}}
 								<li class="menu-item mega-menu">
-									<a class="menu-link" href="#oc-clients"><div>عملائي</div></a>
+									<a class="menu-link" href="#testmonials"><div>عملائي</div></a>
 								</li>
                 <li class="menu-item mega-menu">
 									<a class="menu-link" href="#contact"><div>اتصل بي</div></a>
@@ -64,7 +61,6 @@
 
 					</div>
 
-				</div>
 			</div>
 			<div class="header-wrap-clone"></div>
 		</header><!-- #header end -->

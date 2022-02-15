@@ -139,7 +139,7 @@ Header
 -----------------------------------------------------------------*/
 #logo {
 	margin-right: 0;
-	margin-left: auto;
+	margin-left: 0;
 }
 @media (min-width: 992px) {
 	.full-header #logo {

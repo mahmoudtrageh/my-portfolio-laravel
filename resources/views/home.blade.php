@@ -7,23 +7,25 @@
 			<div class="content-wrap">
 				<div class="container clearfix">
 
-					<div class="row clearfix" id="services">
-						@php
-						$services = DB::table('services')->latest()->get();
-						@endphp
-						@foreach($services as $service)
-						<div class="col-lg-4 center bottommargin">
-							<i class="{{$service->icon}}" style="margin-bottom: 20px;"></i>
-							<div class="heading-block border-bottom-0" style="margin-bottom: 15px;">
-								<h4>{{$service->title}}</h4>
-							</div>
-							<p>{{$service->desc}}</p>
+				<div class="row clearfix">
+					@php
+					$services = DB::table('services')->latest()->get();
+					@endphp
+					@foreach($services as $service)
+					<div class="col-lg-4 center bottommargin">
+						<i class="{{$service->icon}}" style="margin-bottom: 20px;"></i>
+						<div class="heading-block border-bottom-0" style="margin-bottom: 15px;">
+							<h4>{{$service->title}}</h4>
 						</div>
-						@endforeach
-
+						<p>{{$service->desc}}</p>
 					</div>
+					@endforeach
+				</div>
 
-					<div class="line mt-0"></div>
+
+					
+
+					<div id="portfolio" class="line mt-0"></div>
 
 					@php
 					$portfolio = DB::table('portfolios')->latest()->get();
@@ -34,7 +36,7 @@
 					
 						@foreach($portfolio as $item)
 						<div class="portfolio-item">
-							<div class="portfolio-image">
+							<div class="portfolio-image position-relative">
 								<a href="portfolio-single.html">
 									<img src="{{ $item->img  }}" alt="Open Imagination">
 								</a>
@@ -81,7 +83,7 @@
 						</div>
 					</div>
 
-					<div class="line"></div>
+					<div id="testmonials" class="line"></div>
 
 					<div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="100" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-md="4" data-items-lg="5" data-items-xl="6">
 						@php
@@ -106,7 +108,7 @@
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+		<section class="contact">
 			<div class="content-wrap">
 				<div class="container">
 
